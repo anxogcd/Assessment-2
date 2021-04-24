@@ -3,6 +3,9 @@
 import { getData, comparador } from "./helpers.js";
 
 const urlApi = "https://rickandmortyapi.com/api/";
+const month = "December";
+
+console.log(`Cargando los nombres de los personajes del mes de ${month}...`);
 
 async function buscaMes(mes) {
   const capitulosMes = [];
@@ -47,7 +50,6 @@ function obtieneNombres(personajes) {
   return listaLimpia;
 }
 
-const month = "December";
 
 const episodios = await buscaMes(month);
 
@@ -56,5 +58,6 @@ const urls = buscaUrlPersonajes(episodios);
 const personajes = await obtienePersonajes(urls);
 
 const nombres = obtieneNombres(personajes);
+
 
 console.log(nombres);

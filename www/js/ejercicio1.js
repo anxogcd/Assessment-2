@@ -7,9 +7,12 @@ if (isNaN(num) || num < 1) {
   alert("Lo que has introducido no es un número válido");
 }
 
-const users = [];
+console.log(
+  "Cargando usuarios... si has puesto un número muy grande puede tardar un rato"
+);
 
 async function getUser(num) {
+  const users = [];
   const urlApi = "https://randomuser.me/api/";
   for (let i = 0; i < num; i++) {
     const user = {};
@@ -23,7 +26,9 @@ async function getUser(num) {
     user.picture = response.results[0].picture.large;
     users.push(user);
   }
+  return users;
 }
 
-getUser(num);
-console.log(users);
+getUser(num)
+  .then((r) => console.log(r))
+  .catch((e) => e);

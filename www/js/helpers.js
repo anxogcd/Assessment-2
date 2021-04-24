@@ -18,4 +18,14 @@ function comparador(array) {
   return array;
 }
 
-export { getData, comparador };
+function formatTime(time) {
+  const tiempo = {};
+  tiempo.segundos = time % 60;
+  tiempo.minutos = Math.floor((time / 60) % 60);
+  tiempo.horas = Math.floor((time / 3600) % 24);
+  tiempo.dias = Math.floor(time / 86400);
+
+  return tiempo;
+}
+
+export { getData, comparador, formatTime };

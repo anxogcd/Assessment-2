@@ -1,6 +1,7 @@
 "use strict";
 
-const boton = document.querySelectorAll("button");
+const botonAñadir = document.querySelector('#añadirCuadrado');
+const botonEliminar = document.querySelector('#borrarCuadrados')
 const contenedor = document.querySelector("#contenedor");
 
 function randomRGBA() {
@@ -14,6 +15,7 @@ function randomRGBA() {
 
 function addDiv() {
   const div = document.createElement("div");
+  div.id = 'cuadrado'
   div.style.backgroundColor = randomRGBA();
   contenedor.append(div);
 }
@@ -31,8 +33,8 @@ function changeColors() {
   divs.forEach((div) => (div.style.backgroundColor = randomRGBA()));
 }
 
-boton[0].addEventListener("click", handleCreate);
+botonAñadir.addEventListener("click", handleCreate);
 
-boton[1].addEventListener("click", handleReset);
+botonEliminar.addEventListener("click", handleReset);
 
 setInterval(() => changeColors(), 1000);

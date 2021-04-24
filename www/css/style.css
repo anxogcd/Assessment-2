@@ -8,7 +8,7 @@ em {
   text-decoration: underline;
 }
 
-div:not(#contenedor) {
+div#cuadrado {
   border: 1px solid black;
   height: 8rem;
   width: 8rem;
@@ -21,8 +21,25 @@ div#contenedor {
   margin: auto;
 }
 
-button{
-    margin: 2rem;
+div#cronometro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+div#tiempo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
+div.numero {
+  border: 1px solid black;
+  height: 2rem;
+  width: 2rem;
+  padding: 0.25rem;
+}
 
+button {
+  margin: 2rem;
+  padding: 0.25rem;
+}
