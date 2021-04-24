@@ -1,6 +1,6 @@
 "use strict";
 
-// EJERCICIO 1
+import { getData } from "./helpers.js";
 
 const num = prompt("¿Cuantos usuarios quieres obtener?");
 if (isNaN(num) || num < 1) {
@@ -8,12 +8,6 @@ if (isNaN(num) || num < 1) {
 }
 
 const users = [];
-
-function getData(url) {
-  return fetch(url)
-    .then((r) => r.json())
-    .catch((e) => e);
-}
 
 async function getUser(num) {
   const urlApi = "https://randomuser.me/api/";
