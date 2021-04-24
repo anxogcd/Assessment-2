@@ -1,5 +1,7 @@
 "use strict";
 
+import { comparador } from "./helpers.js";
+
 const names = [
   "A-Jay",
   "Manuel",
@@ -17,17 +19,5 @@ const names = [
   "Arun",
   "Kenton",
 ];
-
-function comparador(array) {
-  for (let i = 0; i < array.length; i++) {
-    for (let j = i + 1; j < array.length; j++) {
-      if (array[i] == array[j]) {
-        array.splice(j, 1);
-        j--;
-      }
-    }
-  }
-  return array;
-}
 
 console.log(comparador(names));
