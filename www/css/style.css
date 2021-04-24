@@ -1,3 +1,28 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 em {
   text-decoration: underline;
 }
+
+div:not(#contenedor) {
+  border: 1px solid black;
+  height: 8rem;
+  width: 8rem;
+}
+
+div#contenedor {
+  display: grid;
+  grid-template-columns: 8rem 8rem 8rem 8rem;
+  max-width: max-content;
+  margin: auto;
+}
+
+button{
+    margin: 2rem;
+}
+
+
